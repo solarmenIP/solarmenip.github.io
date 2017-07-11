@@ -542,7 +542,7 @@
         	$('#plantcapacityval2').html(Math.round(cap) + " kW");
         	$('#cost2').html("&#8377; "+Math.round(cost) + " Lacs");
         	
-        	$('#emiVal').html("&#8377; "+Math.round(pmt.toFixed(2)) * -1 +" per month");
+        	$('#emiVal').html("&#8377; "+Math.round(pmt.toFixed(2)) +" per month");
         	$('#minMonthlySavingsVal').html("&#8377; "+Math.round((getSavingsFromCap(result.billamount, cap, result.cusType, 1)).toFixed(2)) +" per month");
         	$('#lifetimesavings').html("&#8377; "+Math.round(getLifeSavings(result.billamount, cap, result.cusType).toFixed(2)) +" Lacs");
         	for (var i = 0; i < result.ftrCashFlowsArray.length; i++) {
