@@ -171,6 +171,7 @@
 	// console.log("Savings : Rs. "+ data.savings);
 	// console.log("Units with Solar: "+ data.unitswSolar);
 	// console.log("Life Time Savings : Rs. "+ data.lifetimesavings);
+	console.log("term"+ data.term);
 
 	return data;
 }

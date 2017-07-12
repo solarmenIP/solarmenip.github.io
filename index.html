@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" href="home1.css">  
+<link rel="stylesheet" type="text/css" href="style.css">  
 
 </head>
 <body >
@@ -33,7 +33,7 @@
 
 	</div>
 
-	<div class="whatdo" >WHAT DO YOU WANT? <a href="#goto3btns"><img src="images/tick2.png" class="tick2"></a></div><br><br>
+	<div class="whatdo" >WHAT DO YOU WANT? <a href="#goto3btns"><img src="images/tick2.png" width="50px;" class="tick2"></a></div><br><br>
 
 		<div style="height: 30px;" id="goto3btns"></div>
 
@@ -415,7 +415,7 @@
 
 			<div class="col-md-8" style="border: 4px solid white;border-radius: 10px;">
 
-				<h2 style="color: white;font-family: -apple-system, BlinkMacSystemFont, sans-serif;" class="text-center">I'm convinced and let me go through to the next steps</h2>
+				<a href="#nextsteplin" style="text-decoration: none" id="nextstep123"><h2 style="color: white;font-family: -apple-system, BlinkMacSystemFont, sans-serif;" class="text-center" >I'm convinced and let me go through to the next steps</h2></a>
 
 			</div>
 
@@ -430,10 +430,149 @@
 
 	</div></div>
 
+
+	<div id="nextsteplin" style="display: none;">
+	<div class="container-fluid" style="font-family: -apple-system, BlinkMacSystemFont, sans-serif;">
+		
+		<h2 style="color:white" class="text-center"><u> Generate my detailed Solar Proposal</u><br><img src="images/tick2.png" width="80px"></h2>
+
+		<div class="container" style="background-color: white;border-radius: 10px">
+
+			<div class="row">
+
+				<div class="col-md-1"></div>
+
+				<div class="col-md-4 text-center">
+						<h2 style="color: orange">Equity</h2><br>
+						 
+						<h1 class="page2values" id="equityVal12"></h1><br><br> 
+						 
+				</div>
+
+				<div class="col-md-2"></div>
+
+				<div class="col-md-4 text-center">
+
+						<h2 style="color:orange">Debt</h2><br>
+						<h1 class="page2values" id="debtval1"> </h1><br><br>
+				</div><br><br>
+
+				<div class="col-md-1"></div>
+
+
+			</div>
+
+			<div class="row">
+
+				<div class="col-md-1"></div>
+
+				<div class="col-md-4 text-center"><br><br>
+						<h2 style="color: orange;"> Loan Terms(Years)</h2><br>
+						<h1 class="page2values" id="loanterms"> </h1>	
+		 
+						 
+				</div> 
+
+				<div class="col-md-2"></div>
+
+				<div class="col-md-4 text-center">
+				<br><br>
+						<h2 style="color:orange">Interest Rate(P.A)</h2><br>
+						<h1 class="page2values" id="interestrate"> </h1>	
+				</div><br><br>
+
+				<div class="col-md-1"></div>
+
+
+			</div><br><br>
+
+		</div>
+
+	</div>
+
 	 <br><br><br>
 
-	 
-	<div class="container-fluid rows" style="color: white;font-family: -apple-system, BlinkMacSystemFont, sans-serif;">
+
+	<div class="container-fluid" style="font-family: -apple-system, BlinkMacSystemFont, sans-serif;">
+
+		<div class="container" style="background-color: white;border-radius: 10px">
+
+			<div class="row">
+
+				<div class="col-md-1"></div>
+
+				<div class="col-md-4 text-center">
+						<h2 style="color: orange">Life Time Savings</h2><br>
+						 
+						<h1 class="page2values" id="totalsavings"></h1><br><br> 
+						 
+				</div>
+
+				<div class="col-md-2"></div>
+
+				<div class="col-md-4 text-center">
+
+						<h2 style="color:orange">Min. Monthly Savings</h2><br>
+						<h1 class="page2values" id="minMonthlySavings1"> </h1><br><br>
+				</div><br><br>
+
+				<div class="col-md-1"></div>
+
+
+			</div>
+
+			<div class="row">
+
+				<div class="col-md-3"></div>
+
+				<div class="col-md-6 text-center"><br><br>
+						<h2 style="color: orange;"> EMI</h2><br>
+						<h1 class="page2values" id="emi1">  </h1>	
+		 
+						 
+				</div> 
+
+				 
+
+				<div class="col-md-3"></div>
+
+
+			</div><br><br>
+
+		</div>
+
+	</div><br><Br><br>
+
+
+	<div class="container" style="width: 90%;margin:0 auto;">
+		
+		<div class="row">
+
+
+			<div class="col-md-2">
+
+
+			</div>
+
+			<div class="col-md-8" style="border: 4px solid white;border-radius: 10px;">
+
+				<a href="#contact" style="text-decoration: none;"><h2 style="color: white;font-family: -apple-system, BlinkMacSystemFont, sans-serif;" class="text-center">I'm convinced and let me go for Solar</h2></a>
+
+			</div>
+
+			<div class="col-md-2">
+
+
+			</div>
+
+		</div>
+
+
+
+	</div></div>
+
+	 <div id="contact" style="height: 50px"></div>
+	<div class="container-fluid rows" style="color: white;font-family: -apple-system, BlinkMacSystemFont, sans-serif;" >
 		
 		<div class="col-sm-4">
 			
@@ -498,6 +637,9 @@
     $("#originaltick").click(function(){
         $("#roireal").show();
     });
+    $("#nextstep123").click(function(){
+        $("#nextsteplin").show();
+    });
 
 		var capitalCost = 0;
 		var pmt = 0;
@@ -537,12 +679,12 @@
         	var cost = $('#inputcost1').val();
         	var cap = $('#inputPlantcapacityval1').val();
         	var pmt = PMT((interest * 0.01)/12, term * 12, (debt/100) * cost * 100000);
-        	emi = pmt * -1; // -1 to make the number positive for display purposes
+        	emi = pmt; // -1 to make the number positive for display purposes
         	
         	$('#plantcapacityval2').html(Math.round(cap) + " kW");
         	$('#cost2').html("&#8377; "+Math.round(cost) + " Lacs");
         	
-        	$('#emiVal').html("&#8377; "+Math.round(pmt.toFixed(2)) +" per month");
+        	$('#emiVal').html("&#8377; "+Math.round(pmt.toFixed(2)) * -1 +" per month");
         	$('#minMonthlySavingsVal').html("&#8377; "+Math.round((getSavingsFromCap(result.billamount, cap, result.cusType, 1)).toFixed(2)) +" per month");
         	$('#lifetimesavings').html("&#8377; "+Math.round(getLifeSavings(result.billamount, cap, result.cusType).toFixed(2)) +" Lacs");
         	for (var i = 0; i < result.ftrCashFlowsArray.length; i++) {
@@ -584,7 +726,7 @@
 			lifetimesavings = result.lifetimesavings / 100000;
 			console.log(minMonthlySavings);
 			console.log(result);
-			var emi = (PMT((result.interest * 0.01)/12, result.term * 12, (result.debt/100) * result.cost * 100000));
+			var emi = (PMT((result.interest * 0.01)/12, result.term * 12, (result.debt/100) * result.cost * 100000))*(-1);
 			//console.log("aa")
 			$('#emival').html(Math.round(result["emi"]));
 			$('#minMonthlySavings').html("&#8377; " + Math.round(result["savings"]));
@@ -594,11 +736,20 @@
 			$('#newbillval').html("&#8377; " + Math.round(result.newbill.toFixed(2)));
 			$('#montlybillval2').html("&#8377; " + Math.round((result["rescolifesavings"]/100000).toFixed(2))+" Lacs");
 			$('#plantcapacityval').html(Math.round(result["maxplantcapacity"]) + " kW");
-			$('#plantareaval').html(Math.round(result["plantarea"].toFixed(2)) + " Sq.Ft.");
-			$('#cost').html("&#8377; "+ Math.round(result.cost.toFixed(2)) + " Lacs");
-			$('#billreduction').html("&#8377; " + Math.round(result.newbill.toFixed(2)));
+			//$('#plantareaval').html(Math.round(result["plantarea"].toFixed(2)) + " Sq.Ft.");
+			//$('#cost').html("&#8377; "+ Math.round(result.cost.toFixed(2)) + " Lacs");
+			//$('#billreduction').html("&#8377; " + Math.round(result.newbill.toFixed(2)));
 			$('#totalsavings').html("&#8377; "+Math.round((result["lifetimesavings"]/100000).toFixed(2))+" Lacs");
-			$('#powergenerated').html(Math.round(result.powergenerated.toFixed(2)) + " kWh");
+			$('#minMonthlySavings1').html("&#8377; " + Math.round(result["savings"]));
+			$('#emi1').html(Math.round(result["emi"]));
+			//$('#powergenerated').html(Math.round(result.powergenerated.toFixed(2)) + " kWh");
+			//$('#equityVal12').html(" &#8377; "+(result.cost.toFixed(2) * 0.3).toFixed(2) + " Lacs");
+			$('#inputcost1').val(Math.round(result.cost.toFixed(2)));
+        	//$('#inputdebt').val(100 - $('inputequity').val());
+        	$('#debtval1').html("&#8377; "+ Math.round(result.debt.toFixed(2)) + " Lacs");
+        	$('#equityVal12').html(" &#8377; "+(result.cost.toFixed(2) * 0.3).toFixed(2) + " Lacs");
+        	$('#loanterms').html(result.term + "years")
+        	$('#interestrate').html(result.interest)
 
 			if(result.maxplantcapacity < 1){
 				$('#capacityAlert').show();
@@ -616,42 +767,45 @@
 		    $("#inputSelectState").val("Andhra Pradesh");
 		});
 
-		// Select all links with hashes
-$('a[href*="#"]')
-  // Remove links that don't actually link to anything
-  .not('[href="#"]')
-  .not('[href="#0"]')
-  .click(function(event) {
-    // On-page links
-    if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-      && 
-      location.hostname == this.hostname
-    ) {
-      // Figure out element to scroll to
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      // Does a scroll target exist?
-      if (target.length) {
-        // Only prevent default if animation is actually gonna happen
-        event.preventDefault();
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000, function() {
-          // Callback after animation
-          // Must change focus!
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) { // Checking if the target was focused
-            return false;
-          } else {
-            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
-          };
-        });
-      }
-    }
-  });
+		 
+// For smooth scrolling
+
+
+		 $('a[href*="#"]')
+		  // Remove links that don't actually link to anything
+		  .not('[href="#"]')
+		  .not('[href="#0"]')
+		  .click(function(event) {
+		    // On-page links
+		    if (
+		      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+		      && 
+		      location.hostname == this.hostname
+		    ) {
+		      // Figure out element to scroll to
+		      var target = $(this.hash);
+		      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+		      // Does a scroll target exist?
+		      if (target.length) {
+		        // Only prevent default if animation is actually gonna happen
+		        event.preventDefault();
+		        $('html, body').animate({
+		          scrollTop: target.offset().top
+		        }, 1000, function() {
+		          // Callback after animation
+		          // Must change focus!
+		          var $target = $(target);
+		          $target.focus();
+		          if ($target.is(":focus")) { // Checking if the target was focused
+		            return false;
+		          } else {
+		            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+		            $target.focus(); // Set focus again
+		          };
+		        });
+		      }
+		    }
+		  });
 
  
 	</script>   
