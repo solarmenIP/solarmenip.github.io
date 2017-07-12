@@ -537,7 +537,7 @@
         	var cost = $('#inputcost1').val();
         	var cap = $('#inputPlantcapacityval1').val();
         	var pmt = PMT((interest * 0.01)/12, term * 12, (debt/100) * cost * 100000);
-        	emi = pmt; // -1 to make the number positive for display purposes
+        	emi = pmt * -1; // -1 to make the number positive for display purposes
         	
         	$('#plantcapacityval2').html(Math.round(cap) + " kW");
         	$('#cost2').html("&#8377; "+Math.round(cost) + " Lacs");
