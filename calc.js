@@ -120,7 +120,7 @@
 		data.savings = billamount - data.newbill;
 		data.cost = Math.round(data.maxplantcapacity * getPlantCostPerKW(data.maxplantcapacity));
 		data.roi = Math.round((((data.lifetimesavings/100000) - data.cost) / data.cost) * 100);
-		data.emi = Math.round(PMT((data.interest * 0.01)/12, data.term * 12, (data.debt/100) * data.cost * 100000));
+		data.emi = Math.round((PMT((data.interest * 0.01)/12, data.term * 12, (data.debt/100) * data.cost * 100000)*(-1));
 	}
 
 	if (category === "Industrial"){
