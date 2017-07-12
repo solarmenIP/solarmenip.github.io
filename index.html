@@ -586,7 +586,7 @@
 			console.log(result);
 			var emi = (PMT((result.interest * 0.01)/12, result.term * 12, (result.debt/100) * result.cost * 100000));
 			//console.log("aa")
-			$('#emival').html(Math.round(result["emi"]));
+			$('#emival').html(Math.round(result["emi"] * -1));
 			$('#minMonthlySavings').html("&#8377; " + Math.round(result["savings"]));
 			$('#montlybillval').html("&#8377; " + Math.round(result["billamount"]));
 			//$('#montlybillval1').html("&#8377; " + Math.round(result["billamount"]));
