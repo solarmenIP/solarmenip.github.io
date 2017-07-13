@@ -37,9 +37,9 @@
 	};
 	
 	data.percentuse = use;
-	data.cusType = category;
 	data.state = state;
-	data.interest = 10.5;
+	data.cusType = category;
+	data.interest = 8.45;
 
 	if (category === "Residential"){
 		data.cusType = "Residential";
@@ -82,7 +82,7 @@
 		data.savings = billamount - data.newbill;
 		data.cost = Math.round(data.maxplantcapacity * getPlantCostPerKW(data.maxplantcapacity));
 		data.roi = Math.round((((data.lifetimesavings/100000) - data.cost) / data.cost) * 100);
-		data.emi = Math.round(PMT((data.interest * 0.01)/12, data.term * 12, (data.debt/100) * data.cost * 100000));
+		data.emi = -1*(Math.round(PMT((data.interest * 0.01)/12, data.term * 12, (data.debt/100) * data.cost * 100000)));
 	}
 
 	if (category === "Commercial"){
@@ -158,7 +158,7 @@
 		data.savings = billamount - data.newbill;
 		data.cost = Math.round(data.maxplantcapacity * getPlantCostPerKW(data.maxplantcapacity));
 		data.roi = Math.round((((data.lifetimesavings/100000) - data.cost) / data.cost) * 100);
-		data.emi = Math.round(PMT((data.interest * 0.01)/12, data.term * 12, (data.debt/100) * data.cost * 100000));
+		data.emi = -1*Math.round(PMT((data.interest * 0.01)/12, data.term * 12, (data.debt/100) * data.cost * 100000));
 
 	}
 
@@ -224,42 +224,34 @@ function getUnits(billamt, year, cusType){
 }
 
 function getPlantCostPerKW(sizeKw) {
-	if(sizeKw >= 1 & sizeKw < 2){
-		return 0.7;
-	}else if(sizeKw >=2 & sizeKw < 4){
-		return 0.65;
-	}else if(sizeKw >= 4 & sizeKw < 10){
+	if(sizeKw >= 1 & sizeKw < 10){
 		return 0.6;
-	}else if(sizeKw >= 10 & sizeKw < 20){
-		return 0.57;
-	}else if(sizeKw >= 20 & sizeKw < 50){
-		return 0.55;
-	}else if(sizeKw >= 50 & sizeKw < 100){
+	}else if(sizeKw >=10 & sizeKw < 25){
 		return 0.52;
-	}else if(sizeKw >= 100 & sizeKw < 200){
-		return 0.50;
-	}else if(sizeKw >= 200 & sizeKw <= 500){
+	}else if(sizeKw >= 25 & sizeKw < 50){
+		return 0.5;
+	}else if(sizeKw >= 50 & sizeKw < 100){
 		return 0.48;
+	}else if(sizeKw >= 100 & sizeKw < 200){
+		return 0.45;
+	}else if(sizeKw >= 200){
+		return 0.43;
 	}
 }
 
 function getSizeFromCost(cost){
-	if(cost <= 1.4){
-		return cost/0.7;
-	}else if(cost > 1.4 & cost <= (0.65 * 4)){
-		return cost/0.65;
-	}else if(cost > (0.65 * 4) & cost <= 0.6 * 10){
-		return cost/0.6;
-	}else if(cost > (0.6 * 10) & cost <= 0.57 * 20){
-		return cost/0.57;
-	}else if(cost > (0.57 * 20) & cost <= 0.55 * 50){
+	if(cost <= 5.5){
 		return cost/0.55;
-	}else if(cost > (0.55 * 50) & cost <= 0.52 * 100){
+	}else if(cost > 5.5 & cost <= (0.52 * 25)){
 		return cost/0.52;
-	}else if(cost > (0.52 * 100) & cost <= 0.50 * 200){
-		return cost/0.50;
-	}else if(cost > (0.50 * 200) & cost <= 0.48 * 500){
+	}else if(cost > (0.52 * 25) & cost <= 0.5 * 50){
+		return cost/0.5;
+	}else if(cost > (0.5 * 50) & cost <= 0.48 * 100){
 		return cost/0.48;
+	}else if(cost > (0.48 * 100) & cost <= 0.45 * 200){
+		return cost/0.45;
+	}else if(cost > (0.45 * 200)) {
+		return cost/0.43;
 	}
 }
 
