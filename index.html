@@ -415,7 +415,7 @@
 
 			<div class="col-md-8" style="border: 4px solid white;border-radius: 10px;">
 
-				<a href="#nextsteplin" style="text-decoration: none" id="nextstep123"><h2 style="color: white;font-family: -apple-system, BlinkMacSystemFont, sans-serif;" class="text-center" >I'm convinced and let me go through to the next steps</h2></a>
+				<a href="#nextsteplin" style="text-decoration: none" id="nextstep123"><h2 style="color: white;font-family: -apple-system, BlinkMacSystemFont, sans-serif;" class="text-center" onclick="planInvestment()" >I'm convinced and let me go through to the next steps</h2></a>
 
 			</div>
 
@@ -443,9 +443,9 @@
 				<div class="col-md-1"></div>
 
 				<div class="col-md-4 text-center">
-						<h2 style="color: orange">Plant Size</h2><br>
+						<h2 style="color: orange">Plant Size (kW)</h2><br>
 						 
-						<input type="number" name="plantsize" style="width: 80%;height:35px;font-size: 140%"><br><br> 
+						<input type="number" name="plantcapacityval1" id="inputPlantcapacityval1" class="form-control" value="0" min="{0}" max="" step="0.5" required="required" title="" style="width: 80%;height:35px;font-size: 140%;margin: 0 auto"><br><br> 
 						 
 				</div>
 
@@ -453,8 +453,8 @@
 
 				<div class="col-md-4 text-center">
 
-						<h2 style="color:orange">Capital Cost</h2><br>
-						<input type="number" name="capitalCost" style="width: 80%;height:35px;font-size: 140%"><br><br>
+						<h2 style="color:orange">Capital Cost (&#8377;) Lacs</h2><br>
+						<input  type="number" name="cost1" id="inputcost1" class="form-control" value="0" min="{0}" max="" step="0.5" required="required" title="" style="width: 80%;height:35px;font-size: 140%;margin: 0 auto"><br><br>
 				</div><br><br>
 
 				<div class="col-md-1"></div>
@@ -462,7 +462,7 @@
 
 			</div>
 
-			<br><br>
+			<br>
 
 		</div><br><br><br>
 
@@ -476,8 +476,10 @@
 
 				<div class="col-md-4 text-center">
 						<h2 style="color: orange">Equity</h2><br>
+
+						<input type="number" name="equity" id="inputequity" class="form-control" value="30" min="{0}" max="100" step="5" required="required" title="" style="width: 80%;margin: 0 auto;height: 35px;font-size: 140%;"><br>
 						 
-						<h1 class="page2values" id="equityVal12"></h1><br><br> 
+						<h1 class="page2values" id="equityVal"></h1><br><br> 
 						 
 				</div>
 
@@ -486,7 +488,9 @@
 				<div class="col-md-4 text-center">
 
 						<h2 style="color:orange">Debt</h2><br>
-						<h1 class="page2values" id="debtval1"> </h1><br><br>
+
+						<input type="number" name="debt" id="inputdebt" class="form-control" value="30" min="{0}" max="100" step="5" required="required" title="" style="width: 80%;margin: 0 auto;height: 35px;font-size: 140%;"><br>
+						<h1 class="page2values" id="debtVal"> </h1><br><br>
 				</div><br><br>
 
 				<div class="col-md-1"></div>
@@ -499,8 +503,10 @@
 				<div class="col-md-1"></div>
 
 				<div class="col-md-4 text-center"><br><br>
-						<h2 style="color: orange;"> Loan Terms(Years)</h2><br>
-						<h1 class="page2values" id="loanterms"> </h1>	
+						<h2 style="color: orange;"> Loan Term (Years)</h2><br>
+
+						<input type="number" name="loanTerm" id="inputloanTerm" class="form-control" value="5" min="{0}" max="100" step="0.5" required="required" title="" style="width: 80%;margin: 0 auto;height: 35px;font-size: 140%;">
+						<!--<h1 class="page2values" id="loanterms"> </h1> -->	
 		 
 						 
 				</div> 
@@ -510,7 +516,9 @@
 				<div class="col-md-4 text-center">
 				<br><br>
 						<h2 style="color:orange">Interest Rate(P.A)</h2><br>
-						<h1 class="page2values" id="interestrate"> </h1>	
+
+						<input type="number" name="interestRate" id="inputinterestRate" class="form-control" value="10.5" min="{0}" max="1000" step="1" required="required" title="" style="width: 80%;margin: 0 auto;height: 35px;font-size: 140%;">
+						<!--<h1 class="page2values" id="interestrate"> </h1>  -->	
 				</div><br><br>
 
 				<div class="col-md-1"></div>
@@ -536,7 +544,7 @@
 				<div class="col-md-4 text-center">
 						<h2 style="color: orange">Life Time Savings</h2><br>
 						 
-						<h1 class="page2values" id="totalsavings"></h1><br><br> 
+						<h1 class="page2values" id="lifetimesavings" style="min-height: 42px;"></h1><br><br> 
 						 
 				</div>
 
@@ -545,7 +553,7 @@
 				<div class="col-md-4 text-center">
 
 						<h2 style="color:orange">Min. Monthly Savings</h2><br>
-						<h1 class="page2values" id="minMonthlySavings1"> </h1><br><br>
+						<h1 class="page2values" id="minMonthlySavingsVal" style="min-height: 42px;"> </h1><br><br>
 				</div><br><br>
 
 				<div class="col-md-1"></div>
@@ -559,7 +567,7 @@
 
 				<div class="col-md-6 text-center"><br><br>
 						<h2 style="color: orange;"> EMI</h2><br>
-						<h1 class="page2values" id="emi1">  </h1>	
+						<h1 class="page2values" id="emiVal" style="min-height: 45px;">  </h1>	
 		 
 						 
 				</div> 
@@ -680,6 +688,53 @@
 		var emi = 0;
 		var equity = 0;
 		var npv = 0;
+
+
+		$( function() {
+
+			$('#inputPlantcapacityval1').keyup( function() {
+
+				updatePCapacity();
+				showReturns();
+
+			});
+
+			$('#inputcost1').keyup( function() {
+
+				updateCCost();
+				showReturns();
+
+			});
+
+			$('#inputequity').keyup( function() {
+
+				updateInvestModal();
+				showReturns();
+
+			});
+
+			$('#inputdebt').keyup( function() {
+
+				updateInvestModal();
+				showReturns();
+
+			});
+
+			$('#inputloanTerm').keyup( function() {
+
+				showReturns();
+
+			});
+
+			$('#inputinterestRate').keyup( function() {
+ 
+				showReturns();
+
+			});
+
+			 
+
+		});
 
 		function recalculate() {
 			$('#calcmain').toggle();
