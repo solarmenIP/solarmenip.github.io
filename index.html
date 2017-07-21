@@ -750,6 +750,7 @@
         	$('#equityVal').html(" &#8377; "+(result.cost.toFixed(2) * 0.3).toFixed(2) + " Lacs");
         	$('#debtVal').html("&#8377; "+(result.cost.toFixed(2) * (1 - ($('inputequity').val()/100))).toFixed(2) + " Lacs");
         	updateInvestModal();
+        	showReturns();
         }
         function updateInvestModal(){
         	$('#inputdebt').val(100 - $('#inputequity').val());
@@ -773,7 +774,7 @@
         	$('#cost2').html("&#8377; "+Math.round(cost) + " Lacs");
         	
         	$('#emiVal').html("&#8377; "+Math.round(pmt.toFixed(2)) * -1 +" per month");
-        	$('#minMonthlySavingsVal').html("&#8377; "+Math.round((getSavingsFromCap(result.billamount, cap, result.cusType, 1)).toFixed(2)) +" per month");
+        	$('#minMonthlySavingsVal').html("&#8377; " + Math.round(result["savings"]));
         	$('#lifetimesavings').html("&#8377; "+Math.round(getLifeSavings(result.billamount, cap, result.cusType).toFixed(2)) +" Lacs");
         	for (var i = 0; i < result.ftrCashFlowsArray.length; i++) {
         		result.ftrCashFlowsArray[i] = result.ftrSavingsArray[i] + (emi * 12) - result.ftrOpExArray[i] - result.ftrReplacementCostArray[i];
